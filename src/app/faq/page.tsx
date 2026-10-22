@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -15,6 +15,10 @@ interface FAQItem {
 export default function FAQPage() {
   const [openIds, setOpenIds] = useState<string[]>(['turnaround-48', 'licensing-rights']);
   const [activeCategory, setActiveCategory] = useState<string>('all');
+
+  useEffect(() => {
+    document.title = 'Frequently Asked Questions | Snapiq';
+  }, []);
 
   const faqs: FAQItem[] = [
     {

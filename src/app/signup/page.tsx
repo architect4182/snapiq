@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
 
@@ -11,6 +11,10 @@ export default function SignupPage() {
   const [handle, setHandle] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = 'Sign Up & Get Started | Snapiq';
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

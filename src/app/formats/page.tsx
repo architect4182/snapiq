@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -20,6 +20,10 @@ interface HookFormat {
 
 export default function FormatsPage() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
+
+  useEffect(() => {
+    document.title = 'Viral Formats & Hook Blueprints | Snapiq';
+  }, []);
 
   const categories = [
     { id: 'all', label: 'All Formats' },

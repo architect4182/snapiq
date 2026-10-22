@@ -1,11 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function HowItWorksPage() {
+  useEffect(() => {
+    document.title = 'How It Works — 48h Production | Snapiq';
+  }, []);
   const timelineStages = [
     {
       time: '00:00',

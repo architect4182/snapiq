@@ -177,6 +177,7 @@ export default function Home() {
   const playIconRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    document.title = 'Snapiq — Captivate Crowds with Snackable Reels';
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;

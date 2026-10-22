@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -18,6 +18,9 @@ interface CreatorProfile {
 }
 
 export default function CreatorsPage() {
+  useEffect(() => {
+    document.title = 'Top Creators Network & Auditions | Snapiq';
+  }, []);
   const creators: CreatorProfile[] = [
     {
       name: 'Sarah Lin',

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
 
@@ -8,6 +8,10 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = 'Log in | Snapiq';
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
